@@ -4,6 +4,11 @@
 # Keep this .gitignore
 !/.gitignore
 
+# Keep GitHub Actions
+!/.github/
+!/.github/workflows/
+!/.github/workflows/deploy.yml
+
 # Track wp-content
 !/wp-content/
 !/wp-content/**
