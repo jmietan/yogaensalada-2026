@@ -1,0 +1,286 @@
+// 1. Design tokens. Palette/font presets stay editable in WordPress Global Styles.
+:root,
+.editor-styles-wrapper {
+  --yc-font-heading: var(--wp--preset--font-family--display, "Playfair Display", Georgia, serif);
+  --yc-font-body: var(--wp--preset--font-family--body, Inter, Arial, sans-serif);
+  --yc-serif: var(--yc-font-heading);
+  --yc-sans: var(--yc-font-body);
+  --yc-font-h1: clamp(2rem, 1.5rem + 2vw, 3rem);
+  --yc-font-h2: clamp(1.75rem, 1.5rem + 1vw, 2.25rem);
+  --yc-font-h3: clamp(1.5rem, 1.375rem + .5vw, 1.75rem);
+  --yc-font-h4: clamp(1.375rem, 1.3125rem + .25vw, 1.5rem);
+  --yc-font-h5: clamp(1.125rem, 1.0625rem + .25vw, 1.25rem);
+  --yc-font-h6: 1.125rem;
+  --yc-font-body-size: 1rem;
+  --yc-font-small: .875rem;
+  --yc-weight-body: 400;
+  --yc-weight-medium: 500;
+  --yc-weight-heading: 600;
+  --yc-weight-bold: 700;
+  --yc-line-h1: 1.2;
+  --yc-line-h2: 1.25;
+  --yc-line-h3: 1.3;
+  --yc-line-h4: 1.35;
+  --yc-line-h5: 1.4;
+  --yc-line-h6: 1.4;
+  --yc-line-body: 1.7;
+  --yc-navy: var(--wp--preset--color--navy, #123e60);
+  --yc-sage: var(--wp--preset--color--sage, #738e65);
+  --yc-coral: var(--wp--preset--color--coral, #e96f5b);
+  --yc-gold: var(--wp--preset--color--gold, #d99a3d);
+  --yc-cream: var(--wp--preset--color--cream, #fcf7ef);
+  --yc-blush: var(--wp--preset--color--blush, #fbe5e0);
+  --yc-mist: var(--wp--preset--color--mist, #e1e6d3);
+  --yc-ink: var(--wp--preset--color--ink, #244760);
+  --yc-color-heading: var(--yc-navy);
+  --yc-color-text: var(--yc-ink);
+  --yc-color-background: var(--yc-cream);
+  --yc-color-link: var(--yc-navy);
+  --yc-color-link-hover: #a43e2f;
+  --yc-color-border: #bdc9c8;
+  --yc-color-muted: #536e83;
+  --yc-color-primary: var(--yc-coral);
+  --yc-color-primary-text: #172f43;
+  --yc-color-secondary: #58754f;
+  --yc-color-secondary-text: #fff;
+  --yc-radius-card: 10px;
+  --yc-radius-image: 8px;
+  --yc-radius-control: 8px;
+  --yc-radius-button: 999px;
+  --yc-content-width: 1200px;
+  --yc-width: 1310px;
+  --yc-reading-width: 760px;
+  --yc-space-1: 8px;
+  --yc-space-2: 16px;
+  --yc-space-3: 24px;
+  --yc-space-4: 32px;
+  --yc-space-5: 40px;
+  --yc-space-6: 48px;
+  --yc-space-7: 56px;
+  --yc-space-8: 64px;
+  --yc-space-10: 80px;
+  --yc-space-12: 96px;
+  --yc-section: 50px;
+  --yc-gutter: clamp(24px, 4.6vw, 66px);
+  --yc-heading-margin: var(--yc-space-2);
+  --yc-paragraph-spacing: var(--yc-space-2);
+  --yc-grid-gap: var(--yc-space-3);
+  --yc-card-padding: var(--yc-space-3);
+  --yc-button-gap: var(--yc-space-1);
+  --yc-button-padding-y: 12px;
+  --yc-button-padding-x: var(--yc-space-4);
+  --yc-transition: 180ms;
+  --yc-ease: ease;
+}
+
+// 2. Reset and global typography. Component layouts can set presentation sizes.
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+.editor-styles-wrapper {
+  margin: 0;
+  font-family: var(--yc-font-body);
+  font-size: var(--yc-font-body-size);
+  font-weight: var(--yc-weight-body);
+  line-height: var(--yc-line-body);
+  color: var(--yc-color-text);
+  background: var(--yc-color-background);
+}
+
+:where(figure, p, h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--yc-font-heading);
+  font-weight: var(--yc-weight-heading);
+  color: var(--yc-color-heading);
+  margin-block-end: var(--yc-heading-margin);
+  overflow-wrap: break-word;
+}
+
+h1 { font-size: var(--yc-font-h1); font-weight: var(--yc-weight-bold); line-height: var(--yc-line-h1); }
+h2 { font-size: var(--yc-font-h2); line-height: var(--yc-line-h2); }
+h3 { font-size: var(--yc-font-h3); line-height: var(--yc-line-h3); }
+h4 { font-size: var(--yc-font-h4); line-height: var(--yc-line-h4); }
+h5 { font-size: var(--yc-font-h5); line-height: var(--yc-line-h5); }
+h6 { font-size: var(--yc-font-h6); line-height: var(--yc-line-h6); }
+
+:where(p) {
+  font-size: var(--yc-font-body-size);
+  font-weight: var(--yc-weight-body);
+  line-height: var(--yc-line-body);
+}
+
+:where(small, .has-small-font-size, .wp-block-post-date) {
+  font-size: var(--yc-font-small);
+  font-weight: var(--yc-weight-body);
+}
+
+:where(.wp-block-post-content, .entry-content) > :where(p, ul, ol, blockquote) {
+  margin-block-end: var(--yc-paragraph-spacing);
+}
+
+:where(.wp-block-post-content, .entry-content) > :where(h2, h3, h4, h5, h6) {
+  margin-block-start: var(--yc-space-4);
+}
+
+// 3. Links and keyboard focus. Navigation and component links keep their layout styles.
+:where(a) {
+  color: var(--yc-color-link);
+  text-decoration: underline;
+  text-underline-offset: .18em;
+  text-decoration-thickness: .08em;
+  transition: color var(--yc-transition) var(--yc-ease),
+    background-color var(--yc-transition) var(--yc-ease),
+    border-color var(--yc-transition) var(--yc-ease);
+}
+
+:where(a:hover) {
+  color: var(--yc-color-link-hover);
+  text-decoration-thickness: .12em;
+}
+
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid var(--yc-navy);
+  outline-offset: 4px;
+}
+
+:where(.wp-block-navigation, .wp-block-button, button, input, select, textarea) {
+  font-family: var(--yc-font-body);
+}
+
+// 4. Buttons. Three optional shared variants; legacy hooks remain compatible.
+:where(.yc-button, .wp-block-button__link, .wp-element-button, button[type="submit"], input[type="submit"], a[role="button"], .gb-text[data-button]) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--yc-button-gap);
+  min-height: 48px;
+  padding: var(--yc-button-padding-y) var(--yc-button-padding-x);
+  border: 2px solid transparent;
+  border-radius: var(--yc-radius-button);
+  font-family: var(--yc-font-body);
+  font-size: var(--yc-font-body-size);
+  font-weight: var(--yc-weight-heading);
+  line-height: 1.3;
+  background: var(--yc-color-primary);
+  color: var(--yc-color-primary-text);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--yc-transition) var(--yc-ease),
+    border-color var(--yc-transition) var(--yc-ease),
+    color var(--yc-transition) var(--yc-ease), filter var(--yc-transition) var(--yc-ease);
+}
+
+:where(.yc-button, .wp-block-button__link, .wp-element-button, button[type="submit"], input[type="submit"], a[role="button"], .gb-text[data-button]):hover {
+  filter: brightness(.92);
+  text-decoration: none;
+}
+
+:where(.yc-green, .is-style-secondary, [data-button="secondary"]) {
+  background: var(--yc-color-secondary);
+  color: var(--yc-color-secondary-text);
+}
+
+:where(.wp-block-button.is-style-secondary) > .wp-block-button__link {
+  background: var(--yc-color-secondary);
+  color: var(--yc-color-secondary-text);
+}
+
+:where(.yc-outline, .is-style-outline, [data-button="outline"]) {
+  background: transparent;
+  color: var(--yc-navy);
+  border: 2px solid var(--yc-color-border);
+}
+
+:where(.wp-block-button.is-style-outline) > .wp-block-button__link {
+  background: transparent;
+  color: var(--yc-navy);
+  border: 2px solid var(--yc-color-border);
+}
+
+:where(button, input[type="submit"]):disabled,
+:where(a[role="button"], .wp-block-button__link, .yc-button)[aria-disabled="true"] {
+  opacity: .5;
+  cursor: not-allowed;
+  filter: grayscale(.25);
+}
+
+// 5. Images and reusable native aspect-ratio styles.
+:where(img) {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+:where(.wp-block-image img, .gb-media, .wp-block-post-featured-image img) {
+  border-radius: var(--yc-radius-image);
+}
+
+:where(.wp-block-site-logo img, .custom-logo) {
+  border-radius: 0;
+  object-fit: contain;
+}
+
+:where(.is-style-landscape img, img.is-style-landscape, .wp-block-post-featured-image img) {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+:where(.is-style-square img, img.is-style-square) {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+// 6. Layout primitives: use these tokens in native block/GenerateBlocks controls.
+:where(.wp-block-columns, .wp-block-post-template.is-layout-grid) {
+  gap: var(--yc-grid-gap);
+}
+
+:where(.wp-block-column, .wp-block-post, .gb-element) {
+  min-width: 0;
+}
+
+:where(.wp-block-post-content) {
+  overflow-wrap: break-word;
+}
+
+:where(.wp-block-query) .wp-block-post-title a {
+  text-decoration: none;
+}
+
+:where(.wp-block-query) .wp-block-post-title a:hover {
+  text-decoration: underline;
+}
+
+// 7. Tablet 768–1023px; mobile below 768px. Approved component breakpoints stay intact.
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root, .editor-styles-wrapper {
+    --yc-section: 40px;
+    --yc-grid-gap: var(--yc-space-3);
+    --yc-card-padding: var(--yc-space-3);
+  }
+}
+
+@media (max-width: 767px) {
+  :root, .editor-styles-wrapper {
+    --yc-section: 32px;
+    --yc-gutter: 24px;
+    --yc-grid-gap: var(--yc-space-2);
+    --yc-card-padding: var(--yc-space-2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  :root, .editor-styles-wrapper { --yc-transition: 0ms; }
+}

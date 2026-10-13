@@ -1,0 +1,215 @@
+/* Testimonial component shared by the frontend and block editor. */
+.yc-testimonials { box-sizing: border-box; color: var(--yc-navy, #103d5e); font-family: var(--yc-sans, Inter, Arial, sans-serif); }
+.yc-testimonials *, .yc-testimonials *::before, .yc-testimonials *::after { box-sizing: border-box; }
+.yc-testimonial-arrow, .yc-testimonial-dot { cursor: pointer; }
+.yc-testimonial-arrow:focus-visible, .yc-testimonial-dot:focus-visible { outline: 3px solid var(--yc-navy, #103d5e); outline-offset: 4px; }
+.yc-testimonials{
+  place-items: center;
+  padding-inline: 20px;
+}
+.yc-quote{
+  margin-bottom: 14px;
+}
+@media(max-width:767px){.yc-testimonial-card{
+    padding: 28px;
+  }
+}
+.yc-testimonials{
+  position: relative;
+  isolation: isolate;
+}
+.yc-testimonials:before,.yc-testimonials:after{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  width: 175px;
+  height: 280px;
+  background: url('images/botanical.svg') no-repeat center / cover;
+  pointer-events: none;
+  opacity: .7;
+}
+.yc-testimonials:before{
+  left: 0;
+  transform: rotate(18deg);
+}
+.yc-testimonials:after{
+  right: 0;
+  transform: scaleX(-1) rotate(18deg);
+}
+@media(max-width:767px){.yc-testimonials:before,.yc-testimonials:after{
+    width: 70px;
+    opacity: .3;
+  }
+}
+.yc-testimonials{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 27px;
+  min-height: 330px;
+  padding: 58px 24px 32px;
+  background: #e0e5d2;
+}
+.yc-testimonial-track{
+  display: grid;
+  grid-template-columns: 64px minmax(0,710px) 64px;
+  align-items: center;
+  gap: 60px;
+  width: min(100%,958px);
+  margin-inline: auto;
+}
+.yc-testimonial-card{
+  width: 100%;
+  max-width: none;
+  display: grid;
+  grid-template-columns: 144px minmax(0,1fr);
+  align-items: center;
+  gap: 28px;
+  padding: 24px 40px 24px 50px;
+  border-radius: 10px;
+  background: var(--yc-cream, #fbf7ef);
+}
+.yc-testimonial-portrait{
+  width: 144px;
+  height: 144px;
+  margin: 0;
+}
+.yc-testimonial-portrait img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.yc-testimonial-copy{
+  min-width: 0;
+}
+.yc-quote{
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+.yc-testimonial-author{
+  font-size: 16px;
+  line-height: 1.4;
+}
+.yc-testimonial-arrow{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid #aebfc3;
+  background: transparent;
+  color: #69859a;
+  font: 28px/1 var(--yc-sans, Inter, Arial, sans-serif);
+  display: grid;
+  place-items: center;
+  padding: 0;
+  margin: 0;
+}
+.yc-testimonial-arrow:disabled{
+  opacity: .7;
+  cursor: default;
+}
+.yc-testimonial-dots{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.yc-testimonial-dot{
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #98adb7;
+  border-radius: 50%;
+}
+.yc-testimonial-dot.is-active{
+  border-color: var(--yc-sage, #789268);
+  background: var(--yc-sage, #789268);
+}
+@media(max-width:1000px){.yc-testimonial-track{
+    gap: 24px;
+    grid-template-columns: 52px minmax(0,1fr) 52px;
+  }
+.yc-testimonial-arrow{
+    width: 52px;
+    height: 52px;
+  }
+.yc-testimonial-card{
+    grid-template-columns: 110px minmax(0,1fr);
+    padding: 24px;
+    gap: 22px;
+  }
+.yc-testimonial-portrait{
+    width: 110px;
+    height: 110px;
+  }
+.yc-quote{
+    font-size: 18px;
+  }
+}
+@media(max-width:600px){.yc-testimonials{
+    padding: 36px 20px 28px;
+    gap: 20px;
+  }
+.yc-testimonial-track{
+    grid-template-columns: 36px minmax(0,1fr) 36px;
+    gap: 8px;
+  }
+.yc-testimonial-card{
+    grid-template-columns: 1fr;
+    padding: 24px 18px;
+    gap: 16px;
+    text-align: center;
+  }
+.yc-testimonial-portrait{
+    width: 80px;
+    height: 80px;
+    margin-inline: auto;
+  }
+.yc-quote{
+    font-size: 16px;
+    line-height: 1.5;
+  }
+.yc-testimonial-author{
+    font-size: 13px;
+  }
+.yc-testimonial-arrow{
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+.yc-testimonial-dot{
+    width: 12px;
+    height: 12px;
+  }
+.yc-testimonial-dots{
+    gap: 12px;
+  }
+}
+.yc-testimonial-card[hidden]{
+  display: none;
+}
+button.yc-testimonial-dot{
+  padding: 0;
+  min-width: 0;
+  background: transparent;
+  cursor: pointer;
+}
+button.yc-testimonial-dot.is-active{
+  background: var(--yc-sage, #789268);
+}
+
+/* Approved sunrise and contour decoration. */
+.yc-testimonials { background: #e2e8d5; overflow: hidden; min-height: 350px; }
+.yc-testimonials::before, .yc-testimonials::after {
+ top: 0; bottom: 0; width: 30%; height: 100%;
+ background: url('images/sunrise-lines.svg') no-repeat left bottom / 100% 100%;
+ opacity: 1; transform: none;
+}
+.yc-testimonials::after { transform: scaleX(-1); }
+@media (max-width: 767px) {
+ .yc-testimonials::before, .yc-testimonials::after { width: 38%; opacity: .45; }
+}

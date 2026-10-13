@@ -1,0 +1,404 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "1200px",
+      "wideSize": "1310px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        {
+          "slug": "navy",
+          "name": "Navy",
+          "color": "#123e60"
+        },
+        {
+          "slug": "sage",
+          "name": "Sage",
+          "color": "#738e65"
+        },
+        {
+          "slug": "coral",
+          "name": "Coral",
+          "color": "#e96f5b"
+        },
+        {
+          "slug": "gold",
+          "name": "Gold",
+          "color": "#d99a3d"
+        },
+        {
+          "slug": "cream",
+          "name": "Cream",
+          "color": "#fcf7ef"
+        },
+        {
+          "slug": "blush",
+          "name": "Blush",
+          "color": "#fbe5e0"
+        },
+        {
+          "slug": "mist",
+          "name": "Mist",
+          "color": "#e1e6d3"
+        },
+        {
+          "slug": "ink",
+          "name": "Ink",
+          "color": "#244760"
+        }
+      ]
+    },
+    "spacing": {
+      "units": [
+        "px",
+        "rem",
+        "vw",
+        "%"
+      ],
+      "spacingSizes": [
+        {
+          "slug": "8",
+          "name": "8px",
+          "size": "8px"
+        },
+        {
+          "slug": "16",
+          "name": "16px",
+          "size": "16px"
+        },
+        {
+          "slug": "24",
+          "name": "24px",
+          "size": "24px"
+        },
+        {
+          "slug": "32",
+          "name": "32px",
+          "size": "32px"
+        },
+        {
+          "slug": "40",
+          "name": "40px",
+          "size": "40px"
+        },
+        {
+          "slug": "48",
+          "name": "48px",
+          "size": "48px"
+        },
+        {
+          "slug": "50",
+          "name": "50px",
+          "size": "50px"
+        },
+        {
+          "slug": "56",
+          "name": "56px",
+          "size": "56px"
+        },
+        {
+          "slug": "64",
+          "name": "64px",
+          "size": "64px"
+        },
+        {
+          "slug": "80",
+          "name": "80px",
+          "size": "80px"
+        },
+        {
+          "slug": "96",
+          "name": "96px",
+          "size": "96px"
+        }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "slug": "body",
+          "name": "Inter",
+          "fontFamily": "Inter, Arial, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/inter-400.ttf"
+              ]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/inter-500.ttf"
+              ]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "normal",
+              "fontWeight": "600",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/inter-600.ttf"
+              ]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "normal",
+              "fontWeight": "700",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/inter-700.ttf"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "display",
+          "name": "Playfair Display",
+          "fontFamily": "\"Playfair Display\", Georgia, serif",
+          "fontFace": [
+            {
+              "fontFamily": "Playfair Display",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/playfair-display-400.ttf"
+              ]
+            },
+            {
+              "fontFamily": "Playfair Display",
+              "fontStyle": "normal",
+              "fontWeight": "600",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/playfair-display-600.ttf"
+              ]
+            },
+            {
+              "fontFamily": "Playfair Display",
+              "fontStyle": "normal",
+              "fontWeight": "700",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/playfair-display-700.ttf"
+              ]
+            }
+          ]
+        }
+      ],
+      "fluid": true,
+      "defaultFontSizes": false,
+      "fontSizes": [
+        {
+          "slug": "h1",
+          "name": "H1",
+          "size": "48px",
+          "fluid": {
+            "min": "32px",
+            "max": "48px"
+          }
+        },
+        {
+          "slug": "h2",
+          "name": "H2",
+          "size": "36px",
+          "fluid": {
+            "min": "28px",
+            "max": "36px"
+          }
+        },
+        {
+          "slug": "h3",
+          "name": "H3",
+          "size": "28px",
+          "fluid": {
+            "min": "24px",
+            "max": "28px"
+          }
+        },
+        {
+          "slug": "h4",
+          "name": "H4",
+          "size": "24px",
+          "fluid": {
+            "min": "22px",
+            "max": "24px"
+          }
+        },
+        {
+          "slug": "h5",
+          "name": "H5",
+          "size": "20px",
+          "fluid": {
+            "min": "18px",
+            "max": "20px"
+          }
+        },
+        {
+          "slug": "h6",
+          "name": "H6",
+          "size": "18px",
+          "fluid": {
+            "min": "18px",
+            "max": "18px"
+          }
+        },
+        {
+          "slug": "body",
+          "name": "Body",
+          "size": "16px",
+          "fluid": false
+        },
+        {
+          "slug": "small",
+          "name": "Small",
+          "size": "14px",
+          "fluid": false
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|cream",
+      "text": "var:preset|color|ink"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|body",
+      "fontSize": "var:preset|font-size|body",
+      "lineHeight": "1.7",
+      "fontWeight": "400"
+    },
+    "spacing": {
+      "blockGap": "0"
+    },
+    "elements": {
+      "heading": {
+        "color": {
+          "text": "var:preset|color|navy"
+        },
+        "typography": {
+          "fontFamily": "var:preset|font-family|display",
+          "fontWeight": "600",
+          "lineHeight": "1.25"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var:preset|color|navy"
+        },
+        "typography": {
+          "textDecoration": "underline"
+        },
+        ":hover": {
+          "color": {
+            "text": "#a43e2f"
+          }
+        }
+      },
+      "h1": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|display",
+          "fontSize": "var:preset|font-size|h1",
+          "fontWeight": "700",
+          "lineHeight": "1.2"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|display",
+          "fontSize": "var:preset|font-size|h2",
+          "fontWeight": "600",
+          "lineHeight": "1.25"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|display",
+          "fontSize": "var:preset|font-size|h3",
+          "fontWeight": "600",
+          "lineHeight": "1.3"
+        }
+      },
+      "h4": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|display",
+          "fontSize": "var:preset|font-size|h4",
+          "fontWeight": "600",
+          "lineHeight": "1.35"
+        }
+      },
+      "h5": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|display",
+          "fontSize": "var:preset|font-size|h5",
+          "fontWeight": "600",
+          "lineHeight": "1.4"
+        }
+      },
+      "h6": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|display",
+          "fontSize": "var:preset|font-size|h6",
+          "fontWeight": "600",
+          "lineHeight": "1.4"
+        }
+      },
+      "button": {
+        "color": {
+          "background": "var:preset|color|coral",
+          "text": "#172f43"
+        },
+        "typography": {
+          "fontFamily": "var:preset|font-family|body",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "lineHeight": "1.3"
+        },
+        "border": {
+          "radius": "999px"
+        },
+        "spacing": {
+          "padding": {
+            "top": "12px",
+            "right": "32px",
+            "bottom": "12px",
+            "left": "32px"
+          }
+        }
+      }
+    },
+    "blocks": {
+      "core/navigation": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|body",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        }
+      }
+    }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    }
+  ]
+}

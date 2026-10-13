@@ -1,0 +1,154 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "1200px",
+      "wideSize": "1310px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        {
+          "slug": "navy",
+          "name": "Navy",
+          "color": "#123e60"
+        },
+        {
+          "slug": "sage",
+          "name": "Sage",
+          "color": "#738e65"
+        },
+        {
+          "slug": "coral",
+          "name": "Coral",
+          "color": "#e96f5b"
+        },
+        {
+          "slug": "gold",
+          "name": "Gold",
+          "color": "#d99a3d"
+        },
+        {
+          "slug": "cream",
+          "name": "Cream",
+          "color": "#fcf7ef"
+        },
+        {
+          "slug": "blush",
+          "name": "Blush",
+          "color": "#fbe5e0"
+        },
+        {
+          "slug": "mist",
+          "name": "Mist",
+          "color": "#e1e6d3"
+        },
+        {
+          "slug": "ink",
+          "name": "Ink",
+          "color": "#244760"
+        }
+      ]
+    },
+    "spacing": {
+      "units": [
+        "px",
+        "rem",
+        "vw",
+        "%"
+      ],
+      "spacingSizes": [
+        {
+          "slug": "8",
+          "name": "8px",
+          "size": "8px"
+        },
+        {
+          "slug": "16",
+          "name": "16px",
+          "size": "16px"
+        },
+        {
+          "slug": "24",
+          "name": "24px",
+          "size": "24px"
+        },
+        {
+          "slug": "32",
+          "name": "32px",
+          "size": "32px"
+        },
+        {
+          "slug": "50",
+          "name": "50px",
+          "size": "50px"
+        },
+        {
+          "slug": "64",
+          "name": "64px",
+          "size": "64px"
+        }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "slug": "body",
+          "name": "System Sans",
+          "fontFamily": "Arial, Helvetica, sans-serif"
+        },
+        {
+          "slug": "display",
+          "name": "Editorial Serif",
+          "fontFamily": "Georgia, Times New Roman, serif"
+        }
+      ],
+      "fluid": true
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|cream",
+      "text": "var:preset|color|ink"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|body",
+      "fontSize": "18px",
+      "lineHeight": "1.5"
+    },
+    "spacing": {
+      "blockGap": "0"
+    },
+    "elements": {
+      "heading": {
+        "color": {
+          "text": "var:preset|color|navy"
+        },
+        "typography": {
+          "fontFamily": "var:preset|font-family|display",
+          "fontWeight": "700",
+          "lineHeight": "1.05"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var:preset|color|navy"
+        }
+      }
+    }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    }
+  ]
+}

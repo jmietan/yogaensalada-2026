@@ -1,0 +1,11 @@
+{
+  "name": "yogensalada-color",
+  "private": true,
+  "scripts": {
+    "build": "sass --style=compressed --no-source-map assets/scss/theme.scss theme.css",
+    "watch": "sass --watch assets/scss/theme.scss:theme.css"
+  },
+  "devDependencies": {
+    "sass": "^1.89.0"
+  }
+}

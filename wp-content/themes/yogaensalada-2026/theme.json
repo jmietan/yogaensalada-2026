@@ -1,0 +1,101 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "760px",
+      "wideSize": "1200px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        {
+          "slug": "background",
+          "name": "Warm Cream",
+          "color": "#F5EFE3"
+        },
+        {
+          "slug": "text",
+          "name": "Charcoal",
+          "color": "#50504C"
+        },
+        {
+          "slug": "lime",
+          "name": "Lime Green",
+          "color": "#709F5B"
+        },
+        {
+          "slug": "blue",
+          "name": "Dark blue",
+          "color": "#213D5E"
+        },
+        {
+          "slug": "citrus",
+          "name": "Citrus Yellow",
+          "color": "#F3DC5C"
+        },
+        {
+          "slug": "watermelon",
+          "name": "Watermelon Red",
+          "color": "#D0475D"
+        },
+        {
+          "slug": "coral",
+          "name": "Coral",
+          "color": "#DB574F"
+        },
+        {
+          "slug": "dusty-pink",
+          "name": "Dusty Pink",
+          "color": "#EDB0B2"
+        }
+      ]
+    },
+    "spacing": {
+      "units": ["px", "rem", "%", "vw"]
+    },
+    "typography": {
+      "fluid": true
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|background",
+      "text": "var:preset|color|text"
+    },
+    "spacing": {
+      "blockGap": "0"
+    },
+    "typography": {
+      "fontFamily": "Arial, sans-serif",
+      "fontSize": "18px",
+      "lineHeight": "1.5"
+    },
+    "elements": {
+      "link": {
+        "color": {
+          "text": "var:preset|color|text"
+        }
+      },
+      "button": {
+        "color": {
+          "background": "var:preset|color|watermelon",
+          "text": "var:preset|color|background"
+        }
+      }
+    }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    }
+  ]
+}

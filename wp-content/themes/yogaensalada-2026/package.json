@@ -1,0 +1,11 @@
+{
+  "name": "yogaensalada-2026",
+  "private": true,
+  "scripts": {
+    "build": "sass --style=compressed --no-source-map assets/scss/main.scss assets/css/main.css",
+    "watch": "sass --watch assets/scss/main.scss assets/css/main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.89.0"
+  }
+}

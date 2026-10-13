@@ -1,0 +1,20 @@
+# Ignore everything in WordPress root
+/*
+
+# Keep this .gitignore
+!/.gitignore
+
+# Track wp-content
+!/wp-content/
+!/wp-content/**
+
+# Don't track generated/content files
+/wp-content/cache/
+/wp-content/uploads/
+/wp-content/updraft/
+/wp-content/upgrade/
+/wp-content/ai1wm-backups/
+
+# Don't track logs or macOS files
+*.log
+.DS_Store
