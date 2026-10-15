@@ -158,3 +158,20 @@ add_action(
 // Shared editor presets and defaults for newly inserted blocks.
 require_once get_theme_file_path( 'inc/design-system.php' );
 
+/**
+ * Google Analytics
+ */
+function yogaensalada_google_analytics() {
+    ?>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CG9YDTH7B0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-CG9YDTH7B0');
+    </script>
+    <?php
+}
+add_action( 'wp_head', 'yogaensalada_google_analytics' );
