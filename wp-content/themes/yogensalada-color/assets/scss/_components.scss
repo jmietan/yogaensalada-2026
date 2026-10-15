@@ -976,7 +976,7 @@
 
 }
 
-@media(max-width:600px) {
+@media(max-width:767px) {
   .yc-inner-hero {
     grid-template-columns: 1fr;
     min-height: 0;
@@ -1338,7 +1338,7 @@
 
 }
 
-@media(max-width:600px) {
+@media(max-width:767px) {
   .yc-about-hero {
     grid-template-columns: 1fr;
   }
@@ -1428,7 +1428,7 @@
   min-width: 0;
 }
 
-@media(max-width:600px) {
+@media(max-width:767px) {
   .yc-journey {
     grid-template-columns: minmax(0,1fr);
   }
@@ -2160,4 +2160,34 @@
 
   .yc-hero-description { font-size: 17px; line-height: 1.45; margin-bottom: 22px; }
   .yc-hero > .wp-block-image { height: clamp(260px, 75vw, 420px); }
+}
+
+// Apply the compact mobile composition to every inner-page hero.
+@media (max-width: 767px) {
+  .yc-inner-hero { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+
+  .yc-inner-copy,
+  .yc-about-hero .yc-inner-copy {
+    min-width: 0;
+    padding: 32px 24px 36px 52px;
+  }
+
+  .yc-inner-copy:before { width: 16px; }
+  .yc-inner-copy:after { width: 44px; opacity: .4; pointer-events: none; }
+  .yc-inner-copy > .yc-eyebrow { font-size: 11px; letter-spacing: .12em; }
+  .yc-inner-title { font-size: clamp(2.75rem, 13vw, 4.5rem); line-height: 1.02; margin-bottom: 20px; }
+  .yc-about-title { font-size: clamp(2.25rem, 10vw, 3.5rem); line-height: 1.08; margin-bottom: 20px; }
+  .yc-inner-copy > p:not(.yc-eyebrow) { font-size: 16px; line-height: 1.5; }
+  .yc-inner-hero > .wp-block-image { height: clamp(240px, 70vw, 360px); margin: 0; }
+
+  .yc-contact-methods { grid-template-columns: 1fr; gap: 24px; }
+  .yc-contact-method + .yc-contact-method {
+    border-left: 0;
+    border-top: 1px solid #c6cfc8;
+    padding-top: 24px;
+  }
+  .yc-contact-method h2 { font-size: 20px; }
+  .yc-contact-method p:last-child { font-size: 16px; }
+  .yc-contact-form-wrap { width: 100%; max-width: 100%; }
+  .yc-contact-form :is(input, select, textarea) { min-width: 0; max-width: 100%; }
 }
